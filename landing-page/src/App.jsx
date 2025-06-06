@@ -32,9 +32,11 @@ function App() {
           transition={{ duration: 0.5 }}
           className="container"
         >
-          <div className="logo">Brand</div>
+          <div className="logo">A&J</div>
           
           <nav className="desktop-nav">
+            <a href="#Home">Home</a>
+            <a href="#AboutUs">AboutUs</a>
             <a href="#features">Features</a>
             <a href="#pricing">Pricing</a>
             <a href="#testimonials">Testimonials</a>
@@ -57,6 +59,7 @@ function App() {
             transition={{ type: 'tween' }}
             className="mobile-menu"
           >
+            <a href="AboutUs" onClick={() => setIsMenuOpen(false)}>about</a>
             <a href="#features" onClick={() => setIsMenuOpen(false)}>Features</a>
             <a href="#pricing" onClick={() => setIsMenuOpen(false)}>Pricing</a>
             <a href="#testimonials" onClick={() => setIsMenuOpen(false)}>Testimonials</a>
@@ -106,6 +109,36 @@ function App() {
         </div>
       </section>
 
+{/* About Section */}
+      <section id="about" className="about-us">
+        <div className="container">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Sobre nosotros
+          </motion.h2>
+          
+          <div className="features-grid">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.id}
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="feature-card"
+              >
+                <div className="feature-icon">{feature.icon}</div>
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Features Section */}
       <section id="features" className="features">
         <div className="container">

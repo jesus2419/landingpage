@@ -1,16 +1,18 @@
 /* Variables */
 :root {
-  --primary-color: #4361ee;
-  --secondary-color: #3f37c9;
-  --accent-color: #4895ef;
+  --primary-color: #753696;
+  --secondary-color: #C993E6;
+  --accent-color: #F2E8CF;
   --light-color: #f8f9fa;
   --dark-color: #212529;
   --gray-color: #6c757d;
-  --success-color: #4bb543;
+  --white-color: #ffffff;
+  --success-color: #B3E9C7;
   --max-width: 1200px;
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
+  --star-color: #FFD700;
 }
 
 /* Reset y estilos base */
@@ -24,7 +26,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--dark-color);
-  background-color: white;
+  background-color: var(--white-color)
 }
 
 .app {
@@ -49,7 +51,7 @@ body {
   left: 0;
   width: 100%;
   padding: 1rem 0;
-  background-color: white;
+  background-color: var(--white-color);
   z-index: 1000;
   transition: var(--transition);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -102,7 +104,7 @@ body {
   right: 0;
   width: 70%;
   height: 100vh;
-  background-color: white;
+  background-color: var(--white-color);
   z-index: 1001;
   padding: 2rem;
   display: flex;
@@ -180,7 +182,7 @@ body {
   gap: 0.5rem;
   padding: 0.8rem 1.8rem;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--white-color);
   border: none;
   border-radius: var(--border-radius);
   font-size: 1rem;
@@ -194,6 +196,19 @@ body {
   transform: translateY(-2px);
 }
 
+/* AbouUs */
+.about-us {
+  width: 100vw;
+  min-height: 100vh;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+
+  padding: 2rem 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 /* Features Section */
 .features {
   padding: 5rem 0;
@@ -213,7 +228,7 @@ body {
 
 .feature-card {
   padding: 2rem;
-  background-color: white;
+  background-color: var(--white-color);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
@@ -248,7 +263,7 @@ body {
 /* Testimonials Section */
 .testimonials {
   padding: 5rem 0;
-  background-color: #f8f9fa;
+  background-color: var(--light-color)
 }
 
 .testimonials h2 {
@@ -265,7 +280,7 @@ body {
 
 .testimonial-card {
   padding: 2rem;
-  background-color: white;
+  background-color: var(--white-color);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
@@ -274,7 +289,7 @@ body {
   display: flex;
   gap: 0.2rem;
   margin-bottom: 1rem;
-  color: #FFD700;
+  color: var(--star-color);
 }
 
 .testimonial-card p {
@@ -316,7 +331,7 @@ body {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   border-radius: var(--border-radius);
   text-align: center;
-  color: white;
+  color: vsar(--white-color);
 }
 
 .cta-card h2 {
@@ -333,7 +348,7 @@ body {
 .footer {
   padding: 3rem 0 1rem;
   background-color: var(--dark-color);
-  color: white;
+  color: var(--white-color);
 
 }
 
@@ -363,7 +378,7 @@ body {
 }
 
 .footer-col a:hover {
-  color: white;
+  color: var(--white-color);
 }
 
 .footer-bottom {
